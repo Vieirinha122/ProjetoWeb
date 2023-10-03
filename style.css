@@ -1,0 +1,533 @@
+/* ESTILO GERAL  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #151f28;
+  height: 100vh;
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn-contato button {
+  padding: 10px 40px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #755726;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-social button:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+h2.titulo {
+  color: rgb(242, 227, 179);
+  font-size: 35px;
+  text-align: center;
+  margin-top: 7rem;
+}
+
+button,
+form .btn-enviar input:hover {
+  box-shadow: 0px 0px 8px;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header {
+  padding: 12px px;
+  background-color: rgb(255, 255, 255);
+}
+
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: #0d0000;
+  font-size: 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+header nav.menu-desktop a:hover {
+  transform: scale(1.05);
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav.menu-desktop li {
+  display: inline-block;
+  padding: 0px 40px;
+}
+
+/* ESTILO MENU MOBILE */
+
+.btn-abrir-menu i{
+  color: #755726;
+  font-size: 45px;
+}
+
+.btn-abrir-menu{
+  display: none;
+}
+
+.menu-mobile{
+  background-color: #595843; 
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 0%;
+  overflow: hidden;
+  transition: .2s;
+}
+
+.menu-mobile.abrir-menu{
+  width: 60%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+  display: block;
+}
+
+.menu-mobile nav ul{
+  text-align: right;
+}
+
+.menu-mobile nav ul li a{
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 20px 8%;
+  display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+  background-color: #151f28;
+  color: white;
+}
+
+.overlay-menu{
+  background-color: #000000a7;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  display: none;
+}
+
+.menu-mobile .btn-fechar{
+  padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+  color: white;
+  font-size: 30px;
+}
+
+/* ESTILO TOPO-DO-SITE */
+
+section.topo-do-site {
+  padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.topo-do-site h1 {
+  color: white;
+  font-size: 42px;
+  line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+  color: #f2e3b3;
+}
+
+.topo-do-site .txt-topo-site p {
+  color: #f2e3b3;
+  margin: 30px 0px;
+}
+
+.topo-do-site .img-topo-site {
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+/* ESTILO DAS SKILLS */
+
+.skills {
+  background-color: var(--light-tertiary-color);
+  scroll-margin-top: 15rem;
+}
+
+section.skills h2 {
+  color: black;
+  font-size: 1.9rem;
+}
+
+section.skills p {
+  font-size: 1.29rem;
+}
+
+.skills .skills__content {
+  padding: 6rem 4rem;
+  text-align: center;
+}
+
+.skills .skills__content .description {
+  max-width: 56rem;
+  margin: 0 auto 6rem;
+}
+
+.skills .skills__content ul {
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
+.skills .skills__content ul li .image-container {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.skills .skills__content ul li h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 2rem 0 1rem;
+}
+
+/* ESTILO DA SECTION SOBRE */
+section.sobre {
+  padding: 80px 4%;
+}
+
+section.sobre .flex {
+  align-items: center;
+  gap: 60px;
+}
+
+.sobre .txt-sobre {
+  color: white;
+}
+
+.sobre .txt-sobre h2 {
+  color: white;
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span {
+  color: #f2e3b3;
+  display: block;
+}
+
+.sobre .txt-sobre p {
+  margin: 20px 0;
+  text-align: justify;
+}
+
+.btn-social button {
+  width: 60px;
+  height: 60px;
+  border-radius: 30%;
+  border: none;
+  color: white;
+  background-color: #151f28;
+  font-size: 25px;
+  cursor: pointer;
+  margin: 0 5px;
+  /* transition: .2s; */
+}
+
+/* ESTILO DO PORTFÓLIO */
+section.portifolio {
+  padding: 80px 4%;
+  box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+section.portifolio .flex {
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.img-port {
+  width: 360px;
+  height: 460px;
+  background-color: green;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: 8s;
+  cursor: pointer;
+  border-radius: 40px;
+  position: relative;
+}
+
+.img-port:hover {
+  background-position: 100% 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b8;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #f2e3b3;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+/* ESTILO DO FORMULÁRIO DE CONTATO */
+section.formulario {
+  padding: 80px 4%;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  background-color: #242424;
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: white;
+  font-size: 18px;
+}
+
+form input::placeholder {
+  color: #f2e3b3;
+}
+
+form textarea::placeholder{
+  color: #f2e3b3;
+}
+
+form textarea {
+  resize: none;
+  max-height: 300px;
+}
+
+form .btn-enviar {
+  margin-top: 20px;
+  text-align: center;
+}
+
+form .btn-enviar input {
+  width: 120px;
+  background-color: rgb(242, 227, 179);
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+/* ESTILO DO RODAPÉ */
+footer {
+  padding: 40px 4%;
+  box-shadow: 0 0 40px 10px #595843;
+}
+
+footer .flex {
+  justify-content: space-between;
+}
+
+footer .linefooter {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.borda {
+  border-top: 2px solid #796a3a;
+}
+
+footer .linefooter p i {
+  color: white;
+  font-size: 25px;
+}
+
+footer .linefooter p a {
+  color: white;
+}
+
+.copyright .flex {
+  font-size: 15px;
+  justify-content: center;
+}
+
+.copyright h4{
+  color: white;
+}
+
+.copyright span {
+  color: rgb(242, 227, 179);
+}
+
+@media screen and (max-width: 1020px) {
+  /* CLASSES GERAIS */
+
+  .topo-do-site .flex {
+    flex-direction: column-reverse;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  /* CABEÇALHO */
+
+  .btn-abrir-menu{
+    display: block;
+  }
+
+  .menu-desktop,
+  .btn-contato {
+    display: none;
+  }
+
+  /* TOPO DO SITE */
+  section.topo-do-site .flex {
+    gap: 60px;
+  }
+
+  .topo-do-site .img-topo-site img{
+    width: 15rem;
+  }
+
+  .topo-do-site h1 {
+    font-size: 32px;
+  }
+
+  /* SKILLS */
+
+  .skills .skills__content span p {
+    padding: 0.5rem;
+    line-height: 1.7rem;
+  }
+  .skills ul {
+    display: flex;
+    justify-content: center;
+  }
+  .skills ul p {
+    font-size: 1.2rem;
+  }
+
+  /* SOBRE */
+  .img-sobre img {
+    width: 20rem;
+  }
+
+  .txt-sobre p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
+
+  .sobre .btn-social {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* PORTIFOLIO */
+  section.portifolio {
+    padding: 80px 8%;
+  }
+
+  .img-port {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  section.portifolio .flex {
+    gap: 60px;
+  }
+
+  /* FORMULÁRIO */
+
+  section.formulario {
+    margin-top: -6rem;
+  }
+
+  /* FOOTER */
+
+  footer .linefooter {
+    text-align: center;
+  }
+
+  footer .copyright {
+    text-align: center;
+  }
+}
