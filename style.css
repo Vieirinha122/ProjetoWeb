@@ -436,7 +436,7 @@ footer .linefooter p a {
   color: rgb(242, 227, 179);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   /* CLASSES GERAIS */
 
   .topo-do-site .flex {
